@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParallaxWithSegment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="68m-Ki-rSO" userLabel="SecondCollectionView">
+                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vGH-MM-kvF">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AHT-jO-FJX" userLabel="FirstCollectionView">
+                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pPD-sD-Kqg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVg-EE-2Y6" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple-banner" translatesAutoresizingMaskIntoConstraints="NO" id="zdL-Cg-pmX">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                    </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="inJ-77-DVc">
+                                        <rect key="frame" x="0.0" y="169" width="414" height="32"/>
+                                        <segments>
+                                            <segment title="First Data"/>
+                                            <segment title="Second Data"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="onSegmentedValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hc1-6c-KQX"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="zdL-Cg-pmX" firstAttribute="top" secondItem="AVg-EE-2Y6" secondAttribute="top" id="19M-x8-gMC"/>
+                                    <constraint firstAttribute="height" constant="200" id="Lea-6d-zX1"/>
+                                    <constraint firstAttribute="bottom" secondItem="zdL-Cg-pmX" secondAttribute="bottom" constant="31" id="XfI-lq-7yd"/>
+                                    <constraint firstAttribute="trailing" secondItem="zdL-Cg-pmX" secondAttribute="trailing" id="YKo-uH-6MG"/>
+                                    <constraint firstItem="inJ-77-DVc" firstAttribute="leading" secondItem="AVg-EE-2Y6" secondAttribute="leading" id="jvX-zy-nZB"/>
+                                    <constraint firstAttribute="bottom" secondItem="inJ-77-DVc" secondAttribute="bottom" id="sz4-h2-n3u"/>
+                                    <constraint firstAttribute="trailing" secondItem="inJ-77-DVc" secondAttribute="trailing" id="wv3-Gd-0we"/>
+                                    <constraint firstItem="zdL-Cg-pmX" firstAttribute="leading" secondItem="AVg-EE-2Y6" secondAttribute="leading" id="x8i-yV-yGo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="68m-Ki-rSO" secondAttribute="bottom" id="38x-P5-seO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AVg-EE-2Y6" secondAttribute="trailing" id="IBk-Jj-Vzj"/>
+                            <constraint firstItem="AHT-jO-FJX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mv9-m2-Pki"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="68m-Ki-rSO" secondAttribute="trailing" id="NlD-8C-je7"/>
+                            <constraint firstItem="AVg-EE-2Y6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YK3-IR-zeh"/>
+                            <constraint firstItem="68m-Ki-rSO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yrd-Kj-Bxu"/>
+                            <constraint firstItem="AVg-EE-2Y6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aul-0f-pe4"/>
+                            <constraint firstItem="68m-Ki-rSO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="eK1-o5-pap"/>
+                            <constraint firstItem="AHT-jO-FJX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mRG-to-rYt"/>
+                            <constraint firstItem="AHT-jO-FJX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="plj-fr-mdZ"/>
+                            <constraint firstItem="AHT-jO-FJX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="tno-Bi-6Wn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstCollectionView" destination="AHT-jO-FJX" id="jvE-yS-bMG"/>
+                        <outlet property="heightOfHeaderViewConstraint" destination="Lea-6d-zX1" id="5Fo-HG-I1E"/>
+                        <outlet property="secondCollectionView" destination="68m-Ki-rSO" id="KSC-d7-SVu"/>
+                        <outlet property="segmentedControl" destination="inJ-77-DVc" id="tGj-dV-bns"/>
+                        <outlet property="topOfFirstCollectionViewConstraint" destination="tno-Bi-6Wn" id="0Ro-YA-0mU"/>
+                        <outlet property="topOfSecondCollectionViewConstraint" destination="eK1-o5-pap" id="i79-3j-kLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple-banner" width="816" height="459"/>
+    </resources>
+</document>
